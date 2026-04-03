@@ -3,99 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>יפן 2026 | מזי ושייקו - הלו"ז החכם</title>
+    <title>יפן 2026 | מזי ושייקו - הלו"ז המלא</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
-        :root {
-            --japan-red: #bc002d;
-            --dark-blue: #1a2a3a;
-            --gold: #d4af37;
-            --bg-gray: #f8f9fa;
-            --route-blue: #007bff;
-        }
-        body {
-            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-            background-color: var(--bg-gray);
-            margin: 0; padding: 0; color: var(--dark-blue);
-            line-height: 1.6;
-        }
-        header {
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=1000&q=80');
-            background-size: cover; background-position: center;
-            color: white; padding: 40px 20px; text-align: center;
-        }
-        .nav-tabs {
-            display: flex; overflow-x: auto; background: white;
-            position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-        .nav-link {
-            padding: 15px 25px; white-space: nowrap; text-decoration: none;
-            color: var(--dark-blue); font-weight: bold; border-bottom: 3px solid transparent;
-        }
+        :root { --japan-red: #bc002d; --dark-blue: #1a2a3a; --gold: #d4af37; --bg-gray: #f8f9fa; --route-blue: #007bff; }
+        body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; background-color: var(--bg-gray); margin: 0; padding: 0; color: var(--dark-blue); line-height: 1.6; }
+        header { background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=1000&q=80'); background-size: cover; background-position: center; color: white; padding: 40px 20px; text-align: center; }
+        .nav-tabs { display: flex; overflow-x: auto; background: white; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .nav-link { padding: 15px 25px; white-space: nowrap; text-decoration: none; color: var(--dark-blue); font-weight: bold; border-bottom: 3px solid transparent; }
         .nav-link.active { border-color: var(--japan-red); color: var(--japan-red); }
-
         .container { max-width: 800px; margin: 20px auto; padding: 15px; }
-        
-        .section-title { 
-            background: var(--japan-red); color: white; padding: 10px 20px;
-            border-radius: 5px; margin: 30px 0 20px; font-size: 1.4em;
-        }
-
-        .day-card {
-            background: white; border-radius: 15px; margin-bottom: 25px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08); overflow: hidden;
-            border-right: 6px solid var(--japan-red);
-        }
-        .day-header {
-            background: var(--dark-blue); color: white; padding: 15px 20px;
-            display: flex; justify-content: space-between; align-items: center;
-        }
+        .section-title { background: var(--japan-red); color: white; padding: 10px 20px; border-radius: 5px; margin: 30px 0 20px; font-size: 1.4em; }
+        .day-card { background: white; border-radius: 15px; margin-bottom: 25px; box-shadow: 0 5px 15px rgba(0,0,0,0.08); overflow: hidden; border-right: 6px solid var(--japan-red); }
+        .day-header { background: var(--dark-blue); color: white; padding: 15px 20px; display: flex; justify-content: space-between; align-items: center; }
         .day-body { padding: 20px; }
-
-        .logistics { 
-            background: #f0f7ff; padding: 15px; border-radius: 10px;
-            margin-bottom: 15px; border: 1px solid #d0e3f0; font-size: 0.95em;
-        }
-
-        /* סגנון כפתורי הניווט החדשים */
-        .route-buttons {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 10px;
-            margin: 15px 0;
-            background: #fdfdfd;
-            padding: 10px;
-            border: 1px dashed #ccc;
-            border-radius: 10px;
-        }
-        .btn-route {
-            padding: 10px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-size: 0.85em;
-            font-weight: bold;
-            text-align: center;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 5px;
-        }
+        .logistics { background: #f0f7ff; padding: 15px; border-radius: 10px; margin-bottom: 15px; border: 1px solid #d0e3f0; font-size: 0.95em; }
+        .route-buttons { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 15px 0; background: #fdfdfd; padding: 10px; border: 1px dashed #ccc; border-radius: 10px; }
+        .btn-route { padding: 10px; border-radius: 8px; text-decoration: none; font-size: 0.85em; font-weight: bold; text-align: center; display: flex; align-items: center; justify-content: center; gap: 5px; }
         .btn-morning { background: white; color: var(--route-blue); border: 2px solid var(--route-blue); }
         .btn-evening { background: var(--route-blue); color: white; }
-
         .btn-group { display: flex; gap: 10px; margin-top: 20px; flex-wrap: wrap; }
-        .btn {
-            flex: 1; min-width: 120px; padding: 12px; border-radius: 30px;
-            text-align: center; text-decoration: none; font-weight: bold; font-size: 0.9em;
-            display: flex; align-items: center; justify-content: center; gap: 8px;
-        }
+        .btn { flex: 1; min-width: 120px; padding: 12px; border-radius: 30px; text-align: center; text-decoration: none; font-weight: bold; font-size: 0.9em; display: flex; align-items: center; justify-content: center; gap: 8px; }
         .btn-maps { background: #34a853; color: white; }
         .btn-cal { background: #4285f4; color: white; }
-        
-        .hotel-footer {
-            text-align: center; padding: 20px; background: #eee;
-            margin-top: 10px; font-weight: bold; border-radius: 0 0 15px 15px;
-        }
+        .hotel-footer { text-align: center; padding: 15px; background: #eee; font-weight: bold; }
         footer { text-align: center; padding: 40px; color: #777; font-size: 0.9em; }
     </style>
 </head>
@@ -103,7 +34,7 @@
 
 <header>
     <h1>יפן 2026: המסע של מזי ושייקו</h1>
-    <p>לו"ז חכם עם ניווט מהיר למלונות</p>
+    <p>ספטמבר 21 - אוקטובר 10 | הלו"ז המלא והמעודכן</p>
 </header>
 
 <div class="nav-tabs">
@@ -111,343 +42,304 @@
     <a href="#fuji" class="nav-link">פוג'י</a>
     <a href="#kanazawa" class="nav-link">קאנאזאווה</a>
     <a href="#kyoto" class="nav-link">קיוטו</a>
+    <a href="#hiroshima" class="nav-link">הירושימה</a>
     <a href="#osaka" class="nav-link">אוסקה</a>
+    <a href="#takayama" class="nav-link">טאקאיאמה</a>
 </div>
 
 <div class="container">
 
     <div id="tokyo">
-        <h2 class="section-title"><i class="fas fa-city"></i> טוקיו</h2>
+        <h2 class="section-title"><i class="fas fa-city"></i> חלק 1: טוקיו</h2>
         
         <div class="day-card">
-            <div class="day-header">
-                <span>21.9 | יום 1</span>
-                <span>נחיתה והתאקלמות</span>
-            </div>
+            <div class="day-header"><span>21.9 | יום ב'</span><span>נחיתה והתאקלמות</span></div>
             <div class="day-body">
-                <div class="logistics">
-                    <i class="fas fa-train"></i> <strong>תחבורה:</strong> קו Keikyu מהאנדה ל-Shimbashi.
-                </div>
-
+                <div class="logistics">נחיתה ב-06:55. רכבת Keikyu ל-Shimbashi.</div>
                 <div class="route-buttons">
-                    <a href="https://www.google.com/maps/dir/?api=1&origin=Haneda+Airport&destination=Villa+Fontaine+Grand+Tokyo+Shiodome" class="btn-route btn-morning" target="_blank">
-                        <i class="fas fa-plane-arrival"></i> מהשדה למלון
-                    </a>
-                    <a href="https://www.google.com/maps/dir/?api=1&origin=My+Location&destination=Villa+Fontaine+Grand+Tokyo+Shiodome" class="btn-route btn-evening" target="_blank">
-                        <i class="fas fa-home"></i> חזרה למלון (שיאודומה)
-                    </a>
+                    <a href="https://www.google.com/maps/dir/?api=1&origin=Haneda+Airport&destination=Villa+Fontaine+Grand+Tokyo+Shiodome" class="btn-route btn-morning" target="_blank">מהשדה למלון</a>
+                    <a href="https://www.google.com/maps/dir/?api=1&origin=My+Location&destination=Villa+Fontaine+Grand+Tokyo+Shiodome" class="btn-route btn-evening" target="_blank">חזרה למלון</a>
                 </div>
-
-                <p>צלילה לשקט של <strong>גני המאריקו</strong>. תה מאצ'ה על המים.</p>
-                
+                <p>גני המאריקו ובית התה. תצפית ערב מבניין Caretta.</p>
                 <div class="btn-group">
-                    <a href="https://www.google.com/maps/search/?api=1&query=Hamarikyu+Gardens" class="btn btn-maps" target="_blank"><i class="fas fa-map-marker-alt"></i> ניווט ליעד</a>
-                    <a href="<!DOCTYPE html>
-<html lang="he" dir="rtl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>יפן 2026 | מזי ושייקו - הלו"ז החכם</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <style>
-        :root {
-            --japan-red: #bc002d;
-            --dark-blue: #1a2a3a;
-            --gold: #d4af37;
-            --bg-gray: #f8f9fa;
-            --route-blue: #007bff;
-        }
-        body {
-            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-            background-color: var(--bg-gray);
-            margin: 0; padding: 0; color: var(--dark-blue);
-            line-height: 1.6;
-        }
-        header {
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=1000&q=80');
-            background-size: cover; background-position: center;
-            color: white; padding: 40px 20px; text-align: center;
-        }
-        .nav-tabs {
-            display: flex; overflow-x: auto; background: white;
-            position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-        .nav-link {
-            padding: 15px 25px; white-space: nowrap; text-decoration: none;
-            color: var(--dark-blue); font-weight: bold; border-bottom: 3px solid transparent;
-        }
-        .nav-link.active { border-color: var(--japan-red); color: var(--japan-red); }
-
-        .container { max-width: 800px; margin: 20px auto; padding: 15px; }
-        
-        .section-title { 
-            background: var(--japan-red); color: white; padding: 10px 20px;
-            border-radius: 5px; margin: 30px 0 20px; font-size: 1.4em;
-        }
-
-        .day-card {
-            background: white; border-radius: 15px; margin-bottom: 25px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08); overflow: hidden;
-            border-right: 6px solid var(--japan-red);
-        }
-        .day-header {
-            background: var(--dark-blue); color: white; padding: 15px 20px;
-            display: flex; justify-content: space-between; align-items: center;
-        }
-        .day-body { padding: 20px; }
-
-        .logistics { 
-            background: #f0f7ff; padding: 15px; border-radius: 10px;
-            margin-bottom: 15px; border: 1px solid #d0e3f0; font-size: 0.95em;
-        }
-
-        /* סגנון כפתורי הניווט החדשים */
-        .route-buttons {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 10px;
-            margin: 15px 0;
-            background: #fdfdfd;
-            padding: 10px;
-            border: 1px dashed #ccc;
-            border-radius: 10px;
-        }
-        .btn-route {
-            padding: 10px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-size: 0.85em;
-            font-weight: bold;
-            text-align: center;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 5px;
-        }
-        .btn-morning { background: white; color: var(--route-blue); border: 2px solid var(--route-blue); }
-        .btn-evening { background: var(--route-blue); color: white; }
-
-        .btn-group { display: flex; gap: 10px; margin-top: 20px; flex-wrap: wrap; }
-        .btn {
-            flex: 1; min-width: 120px; padding: 12px; border-radius: 30px;
-            text-align: center; text-decoration: none; font-weight: bold; font-size: 0.9em;
-            display: flex; align-items: center; justify-content: center; gap: 8px;
-        }
-        .btn-maps { background: #34a853; color: white; }
-        .btn-cal { background: #4285f4; color: white; }
-        
-        .hotel-footer {
-            text-align: center; padding: 20px; background: #eee;
-            margin-top: 10px; font-weight: bold; border-radius: 0 0 15px 15px;
-        }
-        footer { text-align: center; padding: 40px; color: #777; font-size: 0.9em; }
-    </style>
-</head>
-<body>
-
-<header>
-    <h1>יפן 2026: המסע של מזי ושייקו</h1>
-    <p>לו"ז חכם עם ניווט מהיר למלונות</p>
-</header>
-
-<div class="nav-tabs">
-    <a href="#tokyo" class="nav-link">טוקיו</a>
-    <a href="#fuji" class="nav-link">פוג'י</a>
-    <a href="#kanazawa" class="nav-link">קאנאזאווה</a>
-    <a href="#kyoto" class="nav-link">קיוטו</a>
-    <a href="#osaka" class="nav-link">אוסקה</a>
-</div>
-
-<div class="container">
-
-    <div id="tokyo">
-        <h2 class="section-title"><i class="fas fa-city"></i> טוקיו</h2>
-        
-        <div class="day-card">
-            <div class="day-header">
-                <span>21.9 | יום 1</span>
-                <span>נחיתה והתאקלמות</span>
-            </div>
-            <div class="day-body">
-                <div class="logistics">
-                    <i class="fas fa-train"></i> <strong>תחבורה:</strong> קו Keikyu מהאנדה ל-Shimbashi.
-                </div>
-
-                <div class="route-buttons">
-                    <a href="https://www.google.com/maps/dir/?api=1&origin=Haneda+Airport&destination=Villa+Fontaine+Grand+Tokyo+Shiodome" class="btn-route btn-morning" target="_blank">
-                        <i class="fas fa-plane-arrival"></i> מהשדה למלון
-                    </a>
-                    <a href="https://www.google.com/maps/dir/?api=1&origin=My+Location&destination=Villa+Fontaine+Grand+Tokyo+Shiodome" class="btn-route btn-evening" target="_blank">
-                        <i class="fas fa-home"></i> חזרה למלון (שיאודומה)
-                    </a>
-                </div>
-
-                <p>צלילה לשקט של <strong>גני המאריקו</strong>. תה מאצ'ה על המים.</p>
-                
-                <div class="btn-group">
-                    <a href="https://www.google.com/maps/search/?api=1&query=Hamarikyu+Gardens" class="btn btn-maps" target="_blank"><i class="fas fa-map-marker-alt"></i> ניווט ליעד</a>
-                    <a href="YOUR_CALENDAR_LINK" class="btn btn-cal" target="_blank"><i class="far fa-calendar-alt"></i> יומן גוגל</a>
+                    <a href="https://www.google.com/maps/search/?api=1&query=Hamarikyu+Gardens" class="btn btn-maps" target="_blank">ניווט לגן</a>
+                    <a href="https://calendar.google.com/calendar/embed?src=shicko01%40gmail.com&ctz=Asia%2FJerusalem" class="btn btn-cal" target="_blank">יומן גוגל</a>
                 </div>
             </div>
-            <div class="hotel-footer">מלון: Villa Fontaine Grand Tokyo Shiodome</div>
+            <div class="hotel-footer">לינה: Villa Fontaine Shiodome</div>
         </div>
 
         <div class="day-card">
-            <div class="day-header">
-                <span>22.9 | יום 2</span>
-                <span>שיבויה ופסטיבל</span>
-            </div>
+            <div class="day-header"><span>22.9 | יום ג'</span><span>פסטיבל ויוקרה</span></div>
             <div class="day-body">
                 <div class="route-buttons">
-                    <a href="https://www.google.com/maps/dir/?api=1&origin=Villa+Fontaine+Grand+Tokyo+Shiodome&destination=Tsukiji+Outer+Market" class="btn-route btn-morning" target="_blank">
-                        <i class="fas fa-sun"></i> מהמלון לשוק
-                    </a>
-                    <a href="https://www.google.com/maps/dir/?api=1&origin=My+Location&destination=Villa+Fontaine+Grand+Tokyo+Shiodome" class="btn-route btn-evening" target="_blank">
-                        <i class="fas fa-home"></i> חזרה למלון (שיאודומה)
-                    </a>
+                    <a href="https://www.google.com/maps/dir/?api=1&origin=Villa+Fontaine+Grand+Tokyo+Shiodome&destination=Tsukiji+Outer+Market" class="btn-route btn-morning" target="_blank">מהמלון לשוק</a>
+                    <a href="https://www.google.com/maps/dir/?api=1&origin=My+Location&destination=Villa+Fontaine+Grand+Tokyo+Shiodome" class="btn-route btn-evening" target="_blank">חזרה למלון</a>
                 </div>
-                <p>בוקר בשוק <strong>צוקיג'י</strong> ופסטיבל <strong>קונו האצ'ימאנגו</strong> בשיבויה.</p>
-                <div class="btn-group">
-                    <a href="https://www.google.com/maps/search/?api=1&query=Konno+Hachimangu+Shrine" class="btn btn-maps" target="_blank"><i class="fas fa-map-marker-alt"></i> ניווט לפסטיבל</a>
-                </div>
+                <p>שוק צוקיג'י ופסטיבל קונו האצ'ימאנגו בשיבויה. ערב במסעדת Kozue.</p>
+                <div class="btn-group"><a href="https://www.google.com/maps/search/?api=1&query=Konno+Hachimangu+Shrine" class="btn btn-maps" target="_blank">ניווט לפסטיבל</a></div>
             </div>
-            <div class="hotel-footer">מלון: Villa Fontaine Grand Tokyo Shiodome</div>
+            <div class="hotel-footer">לינה: Villa Fontaine Shiodome</div>
+        </div>
+
+        <div class="day-card">
+            <div class="day-header"><span>23.9 | יום ד'</span><span>מסורת ועתיד</span></div>
+            <div class="day-body">
+                <div class="route-buttons">
+                    <a href="https://www.google.com/maps/dir/?api=1&origin=Villa+Fontaine+Grand+Tokyo+Shiodome&destination=Senso-ji" class="btn-route btn-morning" target="_blank">מהמלון למקדש</a>
+                    <a href="https://www.google.com/maps/dir/?api=1&origin=My+Location&destination=Villa+Fontaine+Grand+Tokyo+Shiodome" class="btn-route btn-evening" target="_blank">חזרה למלון</a>
+                </div>
+                <p>מקדש סנסו-ג'י, שייט לאודייבה, פסל הגאנדם וגשר הריינבו.</p>
+                <div class="btn-group"><a href="https://www.google.com/maps/search/?api=1&query=Odaiba+Gundam+Statue" class="btn btn-maps" target="_blank">ניווט לגאנדם</a></div>
+            </div>
+            <div class="hotel-footer">לינה: Villa Fontaine Shiodome</div>
         </div>
     </div>
 
     <div id="fuji">
-        <h2 class="section-title"><i class="fas fa-mountain"></i> אזור הפוג'י</h2>
+        <h2 class="section-title"><i class="fas fa-mountain"></i> חלק 2: הר פוג'י</h2>
         
         <div class="day-card">
-            <div class="day-header">
-                <span>24.9 | יום 4</span>
-                <span>נסיעה לאגמים</span>
+            <div class="day-header"><span>24.9 | יום ה'</span><span>נסיעה לאגמים</span></div>
+            <div class="day-body">
+                <div class="logistics">לקיחת רכב בשינאגאווה. נסיעה לקאוואגוצ'יקו.</div>
+                <div class="route-buttons">
+                    <a href="https://www.google.com/maps/dir/?api=1&origin=Villa+Fontaine+Grand+Tokyo+Shiodome&destination=Oishi+Park" class="btn-route btn-morning" target="_blank">מהמלון לפארק אוישי</a>
+                    <a href="https://www.google.com/maps/dir/?api=1&origin=My+Location&destination=Arcade+Hotel+Fuji" class="btn-route btn-evening" target="_blank">חזרה למלון</a>
+                </div>
+                <p>פארק אוישי וצמחי הקוקיה האדומים. ארוחת הוטו.</p>
             </div>
+            <div class="hotel-footer">לינה: Arcade Hotel, Fuji</div>
+        </div>
+
+        <div class="day-card">
+            <div class="day-header"><span>25.9 | יום ו'</span><span>צילום ואמנות</span></div>
             <div class="day-body">
                 <div class="route-buttons">
-                    <a href="https://www.google.com/maps/dir/?api=1&origin=Villa+Fontaine+Grand+Tokyo+Shiodome&destination=Oishi+Park" class="btn-route btn-morning" target="_blank">
-                        <i class="fas fa-car"></i> מהמלון בטוקיו לפוג'י
-                    </a>
-                    <a href="https://www.google.com/maps/dir/?api=1&origin=My+Location&destination=Arcade+Hotel+Fuji" class="btn-route btn-evening" target="_blank">
-                        <i class="fas fa-home"></i> חזרה למלון (פוג'י)
-                    </a>
+                    <a href="https://www.google.com/maps/dir/?api=1&origin=Arcade+Hotel+Fuji&destination=Chureito+Pagoda" class="btn-route btn-morning" target="_blank">מהמלון לפגודה</a>
+                    <a href="https://www.google.com/maps/dir/?api=1&origin=My+Location&destination=Arcade+Hotel+Fuji" class="btn-route btn-evening" target="_blank">חזרה למלון</a>
                 </div>
-                <p>נסיעה ברכב שכור ל<strong>פארק אוישי</strong> מול הר פוג'י.</p>
+                <p>פגודת צ'ורייטו, מוזיאון איצ'יקו קובוטה ומעיינות אושונו האקאי.</p>
             </div>
-            <div class="hotel-footer">מלון: Arcade Hotel, Fuji</div>
+            <div class="hotel-footer">לינה: Arcade Hotel, Fuji</div>
+        </div>
+    </div>
+
+    <div id="kanazawa">
+        <h2 class="section-title"><i class="fas fa-vihara"></i> חלק 3: קאנאזאווה</h2>
+        
+        <div class="day-card">
+            <div class="day-header"><span>26.9 | יום ש'</span><span>מעבר לאלפים</span></div>
+            <div class="day-body">
+                <div class="logistics">החזרת רכב במישימה. שינקנסן לקאנאזאווה.</div>
+                <div class="route-buttons">
+                    <a href="https://www.google.com/maps/dir/?api=1&origin=Arcade+Hotel+Fuji&destination=Mishima+Station" class="btn-route btn-morning" target="_blank">מהמלון לתחנה</a>
+                    <a href="https://www.google.com/maps/dir/?api=1&origin=My+Location&destination=Hotel+Forza+Kanazawa" class="btn-route btn-evening" target="_blank">חזרה למלון</a>
+                </div>
+                <p>רובע הגיישות היגאשי צ'איה בשקיעה. גלידת זהב.</p>
+            </div>
+            <div class="hotel-footer">לינה: Hotel Forza Kanazawa</div>
+        </div>
+
+        <div class="day-card">
+            <div class="day-header"><span>27.9 | יום א'</span><span>גנים וסמוראים</span></div>
+            <div class="day-body">
+                <div class="route-buttons">
+                    <a href="https://www.google.com/maps/dir/?api=1&origin=Hotel+Forza+Kanazawa&destination=Kenrokuen" class="btn-route btn-morning" target="_blank">מהמלון לגן</a>
+                    <a href="https://www.google.com/maps/dir/?api=1&origin=My+Location&destination=Hotel+Forza+Kanazawa" class="btn-route btn-evening" target="_blank">חזרה למלון</a>
+                </div>
+                <p>גן קנרוקואן, רובע הסמוראים נאגאמאצ'י ושוק אומיצ'ו.</p>
+            </div>
+            <div class="hotel-footer">לינה: Hotel Forza Kanazawa</div>
         </div>
     </div>
 
     <div id="kyoto">
-        <h2 class="section-title"><i class="fas fa-torii-gate"></i> קיוטו</h2>
+        <h2 class="section-title"><i class="fas fa-torii-gate"></i> חלק 4: קיוטו</h2>
         
         <div class="day-card">
-            <div class="day-header">
-                <span>30.9 | יום 10</span>
-                <span>נארה והאיילים</span>
+            <div class="day-header"><span>28.9 | יום ב'</span><span>פסטיבל המסרקות</span></div>
+            <div class="day-body">
+                <div class="logistics">רכבת Thunderbird לקיוטו.</div>
+                <div class="route-buttons">
+                    <a href="https://www.google.com/maps/dir/?api=1&origin=Hotel+Forza+Kanazawa&destination=Kanazawa+Station" class="btn-route btn-morning" target="_blank">מהמלון לתחנה</a>
+                    <a href="https://www.google.com/maps/dir/?api=1&origin=My+Location&destination=Mitsui+Garden+Hotel+Kyoto+Station" class="btn-route btn-evening" target="_blank">חזרה למלון</a>
+                </div>
+                <p>פסטיבל Kushi Matsuri בגיון. סמטת פונטוצ'ו בלילה.</p>
             </div>
+            <div class="hotel-footer">לינה: Mitsui Garden Hotel Kyoto Station</div>
+        </div>
+
+        <div class="day-card">
+            <div class="day-header"><span>29.9 | יום ג'</span><span>במבוק וקוסמוס</span></div>
             <div class="day-body">
                 <div class="route-buttons">
-                    <a href="https://www.google.com/maps/dir/?api=1&origin=Mitsui+Garden+Hotel+Kyoto+Station&destination=Todai-ji+Temple" class="btn-route btn-morning" target="_blank">
-                        <i class="fas fa-train"></i> מהמלון לבודהה הענק
-                    </a>
-                    <a href="https://www.google.com/maps/dir/?api=1&origin=My+Location&destination=Mitsui+Garden+Hotel+Kyoto+Station" class="btn-route btn-evening" target="_blank">
-                        <i class="fas fa-home"></i> חזרה למלון (קיוטו)
-                    </a>
+                    <a href="https://www.google.com/maps/dir/?api=1&origin=Mitsui+Garden+Hotel+Kyoto+Station&destination=Arashiyama+Bamboo+Forest" class="btn-route btn-morning" target="_blank">מהמלון ליער</a>
+                    <a href="https://www.google.com/maps/dir/?api=1&origin=My+Location&destination=Mitsui+Garden+Hotel+Kyoto+Station" class="btn-route btn-evening" target="_blank">חזרה למלון</a>
                 </div>
-                <p>יום בנארה: <strong>מקדש טודאי-ג'י</strong> והאיילים החופשיים.</p>
+                <p>יער הבמבוק אראשייאמה ומקדש האניאג'י (פריחת קוסמוס).</p>
             </div>
-            <div class="hotel-footer">מלון: Mitsui Garden Hotel Kyoto Station</div>
+            <div class="hotel-footer">לינה: Mitsui Garden Hotel Kyoto Station</div>
+        </div>
+
+        <div class="day-card">
+            <div class="day-header"><span>30.9 | יום ד'</span><span>נארה והאיילים</span></div>
+            <div class="day-body">
+                <div class="route-buttons">
+                    <a href="https://www.google.com/maps/dir/?api=1&origin=Mitsui+Garden+Hotel+Kyoto+Station&destination=Todai-ji" class="btn-route btn-morning" target="_blank">מהמלון לנארה</a>
+                    <a href="https://www.google.com/maps/dir/?api=1&origin=My+Location&destination=Mitsui+Garden+Hotel+Kyoto+Station" class="btn-route btn-evening" target="_blank">חזרה למלון</a>
+                </div>
+                <p>מקדש טודאי-ג'י, האיילים בנארה וגן איסואיין.</p>
+            </div>
+            <div class="hotel-footer">לינה: Mitsui Garden Hotel Kyoto Station</div>
+        </div>
+
+        <div class="day-card">
+            <div class="day-header"><span>1.10 | יום ה'</span><span>זהב ובוטניקה</span></div>
+            <div class="day-body">
+                <div class="route-buttons">
+                    <a href="https://www.google.com/maps/dir/?api=1&origin=Mitsui+Garden+Hotel+Kyoto+Station&destination=Kinkaku-ji" class="btn-route btn-morning" target="_blank">מהמלון לזהב</a>
+                    <a href="https://www.google.com/maps/dir/?api=1&origin=My+Location&destination=Mitsui+Garden+Hotel+Kyoto+Station" class="btn-route btn-evening" target="_blank">חזרה למלון</a>
+                </div>
+                <p>מקדש הזהב והגנים הבוטניים של קיוטו (אורכידאות).</p>
+            </div>
+            <div class="hotel-footer">לינה: Mitsui Garden Hotel Kyoto Station</div>
+        </div>
+
+        <div class="day-card">
+            <div class="day-header"><span>2.10 | יום ו'</span><span>שערים ותצפית</span></div>
+            <div class="day-body">
+                <div class="route-buttons">
+                    <a href="https://www.google.com/maps/dir/?api=1&origin=Mitsui+Garden+Hotel+Kyoto+Station&destination=Fushimi+Inari+Taisha" class="btn-route btn-morning" target="_blank">מהמלון לשערים</a>
+                    <a href="https://www.google.com/maps/dir/?api=1&origin=My+Location&destination=Mitsui+Garden+Hotel+Kyoto+Station" class="btn-route btn-evening" target="_blank">חזרה למלון</a>
+                </div>
+                <p>פושימי אינארי ותצפית מקיומיזו-דרה.</p>
+            </div>
+            <div class="hotel-footer">לינה: Mitsui Garden Hotel Kyoto Station</div>
+        </div>
+    </div>
+
+    <div id="hiroshima">
+        <h2 class="section-title"><i class="fas fa-dove"></i> חלק 5: הירושימה</h2>
+        
+        <div class="day-card">
+            <div class="day-header"><span>3.10 | יום ש'</span><span>זיכרון ושלום</span></div>
+            <div class="day-body">
+                <div class="logistics">שינקנסן להירושימה.</div>
+                <div class="route-buttons">
+                    <a href="https://www.google.com/maps/dir/?api=1&origin=Mitsui+Garden+Hotel+Kyoto+Station&destination=Hiroshima+Peace+Memorial+Park" class="btn-route btn-morning" target="_blank">מהמלון לפארק</a>
+                    <a href="https://www.google.com/maps/dir/?api=1&origin=My+Location&destination=Hotel+Granvia+Hiroshima" class="btn-route btn-evening" target="_blank">חזרה למלון</a>
+                </div>
+                <p>פארק השלום, אוקונומיאקי ופסטיבל סאקה/במבוק.</p>
+            </div>
+            <div class="hotel-footer">לינה: Hotel Granvia Hiroshima</div>
+        </div>
+
+        <div class="day-card">
+            <div class="day-header"><span>4.10 | יום א'</span><span>האי הקדוש</span></div>
+            <div class="day-body">
+                <div class="route-buttons">
+                    <a href="https://www.google.com/maps/dir/?api=1&origin=Hotel+Granvia+Hiroshima&destination=Miyajimaguchi+Station" class="btn-route btn-morning" target="_blank">מהמלון למעבורת</a>
+                    <a href="https://www.google.com/maps/dir/?api=1&origin=My+Location&destination=Hotel+Granvia+Hiroshima" class="btn-route btn-evening" target="_blank">חזרה למלון</a>
+                </div>
+                <p>מיאג'ימה, שער הטוריי הצף והר מיסן.</p>
+            </div>
+            <div class="hotel-footer">לינה: Hotel Granvia Hiroshima</div>
+        </div>
+    </div>
+
+    <div id="osaka">
+        <h2 class="section-title"><i class="fas fa-music"></i> חלק 6: אוסקה</h2>
+        
+        <div class="day-card">
+            <div class="day-header"><span>5.10 | יום ב'</span><span>ניאון וריקודים</span></div>
+            <div class="day-body">
+                <div class="route-buttons">
+                    <a href="https://www.google.com/maps/dir/?api=1&origin=Hotel+Granvia+Hiroshima&destination=Dotonbori" class="btn-route btn-morning" target="_blank">מהמלון לדוטונבורי</a>
+                    <a href="https://www.google.com/maps/dir/?api=1&origin=My+Location&destination=Hotel+Monterey+Grasmere+Osaka" class="btn-route btn-evening" target="_blank">חזרה למלון</a>
+                </div>
+                <p>דוטונבורי ומפגש ריקודי עם עם סונהרה-סאן.</p>
+            </div>
+            <div class="hotel-footer">לינה: Hotel Monterey Grasmere Osaka</div>
+        </div>
+
+        <div class="day-card">
+            <div class="day-header"><span>6.10 | יום ג'</span><span>שווקים וטירה</span></div>
+            <div class="day-body">
+                <div class="route-buttons">
+                    <a href="https://www.google.com/maps/dir/?api=1&origin=Hotel+Monterey+Grasmere+Osaka&destination=Osaka+Castle" class="btn-route btn-morning" target="_blank">מהמלון לטירה</a>
+                    <a href="https://www.google.com/maps/dir/?api=1&origin=My+Location&destination=Hotel+Monterey+Grasmere+Osaka" class="btn-route btn-evening" target="_blank">חזרה למלון</a>
+                </div>
+                <p>שוק קורומון וטירת אוסקה.</p>
+            </div>
+            <div class="hotel-footer">לינה: Hotel Monterey Grasmere Osaka</div>
+        </div>
+    </div>
+
+    <div id="takayama">
+        <h2 class="section-title"><i class="fas fa-masks-theater"></i> חלק 7: טאקאיאמה</h2>
+        
+        <div class="day-card">
+            <div class="day-header"><span>7.10 | יום ד'</span><span>הדרך לאלפים</span></div>
+            <div class="day-body">
+                <div class="logistics">רכבת Hida Wide View.</div>
+                <div class="route-buttons">
+                    <a href="https://www.google.com/maps/dir/?api=1&origin=Hotel+Monterey+Grasmere+Osaka&destination=Takayama+Station" class="btn-route btn-morning" target="_blank">מהמלון לטאקאיאמה</a>
+                    <a href="https://www.google.com/maps/dir/?api=1&origin=My+Location&destination=Spa+Hotel+Alpina+Hida+Takayama" class="btn-route btn-evening" target="_blank">חזרה למלון</a>
+                </div>
+                <p>נסיעה נופית וסיור ברובע העתיק סנמאצ'י סוג'י.</p>
+            </div>
+            <div class="hotel-footer">לינה: Spa Hotel Alpina Takayama</div>
+        </div>
+
+        <div class="day-card">
+            <div class="day-header"><span>8.10 | יום ה'</span><span>מסורת כפרית</span></div>
+            <div class="day-body">
+                <div class="route-buttons">
+                    <a href="https://www.google.com/maps/dir/?api=1&origin=Spa+Hotel+Alpina+Hida+Takayama&destination=Miyagawa+Morning+Market" class="btn-route btn-morning" target="_blank">מהמלון לשוק</a>
+                    <a href="https://www.google.com/maps/dir/?api=1&origin=My+Location&destination=Spa+Hotel+Alpina+Hida+Takayama" class="btn-route btn-evening" target="_blank">חזרה למלון</a>
+                </div>
+                <p>שוק Miyagawa וכפר הפולקלור הידא.</p>
+            </div>
+            <div class="hotel-footer">לינה: Spa Hotel Alpina Takayama</div>
+        </div>
+
+        <div class="day-card" style="border: 2px solid var(--japan-red);">
+            <div class="day-header" style="background: var(--japan-red);"><span>9.10 | יום ו'</span><span>שיא הטיול: הפסטיבל</span></div>
+            <div class="day-body">
+                <div class="logistics">פסטיבל טאקאיאמה. רכבת לנגויה ב-18:30.</div>
+                <div class="route-buttons">
+                    <a href="https://www.google.com/maps/dir/?api=1&origin=Spa+Hotel+Alpina+Hida+Takayama&destination=Takayama+Station" class="btn-route btn-morning" target="_blank">מהמלון לתחנה</a>
+                    <a href="https://www.google.com/maps/dir/?api=1&origin=My+Location&destination=Nagoya+JR+Gate+Tower+Hotel" class="btn-route btn-evening" target="_blank">חזרה למלון (נגויה)</a>
+                </div>
+                <p>עגלות יאטאי ובובות קאראקורי. מעבר לנגויה.</p>
+            </div>
+            <div class="hotel-footer">לינה: Nagoya JR Gate Tower Hotel</div>
+        </div>
+
+        <div class="day-card">
+            <div class="day-header"><span>10.10 | יום ש'</span><span>הביתה</span></div>
+            <div class="day-body">
+                <div class="logistics">שינקנסן ורכבת נריטה אקספרס.</div>
+                <div class="route-buttons">
+                    <a href="https://www.google.com/maps/dir/?api=1&origin=Nagoya+JR+Gate+Tower+Hotel&destination=Narita+Airport" class="btn-route btn-morning" target="_blank">מהמלון לשדה</a>
+                </div>
+                <p>אריזות מתנה אחרונות וטיסה הביתה.</p>
+            </div>
         </div>
     </div>
 
 </div>
 
-<footer>
-    <p>טיול מהנה! | מזי ושייקו 🌸</p>
-</footer>
+<footer><p>נבנה באהבה עבור מזי ושייקו | יפן 2026 🌸</p></footer>
 
-</body>
-</html>" class="btn btn-cal" target="_blank"><i class="far fa-calendar-alt"></i> יומן גוגל</a>
-                </div>
-            </div>
-            <div class="hotel-footer">מלון: Villa Fontaine Grand Tokyo Shiodome</div>
-        </div>
-
-        <div class="day-card">
-            <div class="day-header">
-                <span>22.9 | יום 2</span>
-                <span>שיבויה ופסטיבל</span>
-            </div>
-            <div class="day-body">
-                <div class="route-buttons">
-                    <a href="https://www.google.com/maps/dir/?api=1&origin=Villa+Fontaine+Grand+Tokyo+Shiodome&destination=Tsukiji+Outer+Market" class="btn-route btn-morning" target="_blank">
-                        <i class="fas fa-sun"></i> מהמלון לשוק
-                    </a>
-                    <a href="https://www.google.com/maps/dir/?api=1&origin=My+Location&destination=Villa+Fontaine+Grand+Tokyo+Shiodome" class="btn-route btn-evening" target="_blank">
-                        <i class="fas fa-home"></i> חזרה למלון (שיאודומה)
-                    </a>
-                </div>
-                <p>בוקר בשוק <strong>צוקיג'י</strong> ופסטיבל <strong>קונו האצ'ימאנגו</strong> בשיבויה.</p>
-                <div class="btn-group">
-                    <a href="https://www.google.com/maps/search/?api=1&query=Konno+Hachimangu+Shrine" class="btn btn-maps" target="_blank"><i class="fas fa-map-marker-alt"></i> ניווט לפסטיבל</a>
-                </div>
-            </div>
-            <div class="hotel-footer">מלון: Villa Fontaine Grand Tokyo Shiodome</div>
-        </div>
-    </div>
-
-    <div id="fuji">
-        <h2 class="section-title"><i class="fas fa-mountain"></i> אזור הפוג'י</h2>
-        
-        <div class="day-card">
-            <div class="day-header">
-                <span>24.9 | יום 4</span>
-                <span>נסיעה לאגמים</span>
-            </div>
-            <div class="day-body">
-                <div class="route-buttons">
-                    <a href="https://www.google.com/maps/dir/?api=1&origin=Villa+Fontaine+Grand+Tokyo+Shiodome&destination=Oishi+Park" class="btn-route btn-morning" target="_blank">
-                        <i class="fas fa-car"></i> מהמלון בטוקיו לפוג'י
-                    </a>
-                    <a href="https://www.google.com/maps/dir/?api=1&origin=My+Location&destination=Arcade+Hotel+Fuji" class="btn-route btn-evening" target="_blank">
-                        <i class="fas fa-home"></i> חזרה למלון (פוג'י)
-                    </a>
-                </div>
-                <p>נסיעה ברכב שכור ל<strong>פארק אוישי</strong> מול הר פוג'י.</p>
-            </div>
-            <div class="hotel-footer">מלון: Arcade Hotel, Fuji</div>
-        </div>
-    </div>
-
-    <div id="kyoto">
-        <h2 class="section-title"><i class="fas fa-torii-gate"></i> קיוטו</h2>
-        
-        <div class="day-card">
-            <div class="day-header">
-                <span>30.9 | יום 10</span>
-                <span>נארה והאיילים</span>
-            </div>
-            <div class="day-body">
-                <div class="route-buttons">
-                    <a href="https://www.google.com/maps/dir/?api=1&origin=Mitsui+Garden+Hotel+Kyoto+Station&destination=Todai-ji+Temple" class="btn-route btn-morning" target="_blank">
-                        <i class="fas fa-train"></i> מהמלון לבודהה הענק
-                    </a>
-                    <a href="https://www.google.com/maps/dir/?api=1&origin=My+Location&destination=Mitsui+Garden+Hotel+Kyoto+Station" class="btn-route btn-evening" target="_blank">
-                        <i class="fas fa-home"></i> חזרה למלון (קיוטו)
-                    </a>
-                </div>
-                <p>יום בנארה: <strong>מקדש טודאי-ג'י</strong> והאיילים החופשיים.</p>
-            </div>
-            <div class="hotel-footer">מלון: Mitsui Garden Hotel Kyoto Station</div>
-        </div>
-    </div>
-
-</div>
-
-<footer>
-    <p>טיול מהנה! | מזי ושייקו 🌸</p>
-</footer>
+<script>
+    window.addEventListener('scroll', () => {
+        let current = ""; const sections = document.querySelectorAll('div[id]');
+        sections.forEach(section => { if (pageYOffset >= section.offsetTop - 100) current = section.getAttribute('id'); });
+        document.querySelectorAll('.nav-link').forEach(link => { link.classList.remove('active'); if (link.getAttribute('href').includes(current)) link.classList.add('active'); });
+    });
+</script>
 
 </body>
 </html>
