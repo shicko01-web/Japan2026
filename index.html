@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>יפן 2026 | מזי ושייקו - הלו"ז המלא</title>
+    <title>יפן 2026 | מזי ושיקו - הלו"ז המלא</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
         :root { --japan-red: #bc002d; --dark-blue: #1a2a3a; --gold: #d4af37; --bg-gray: #f8f9fa; --route-blue: #007bff; }
@@ -18,10 +18,11 @@
         .day-header { background: var(--dark-blue); color: white; padding: 15px 20px; display: flex; justify-content: space-between; align-items: center; }
         .day-body { padding: 20px; }
         .logistics { background: #f0f7ff; padding: 15px; border-radius: 10px; margin-bottom: 15px; border: 1px solid #d0e3f0; font-size: 0.95em; }
-        .route-buttons { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 15px 0; background: #fdfdfd; padding: 10px; border: 1px dashed #ccc; border-radius: 10px; }
-        .btn-route { padding: 10px; border-radius: 8px; text-decoration: none; font-size: 0.85em; font-weight: bold; text-align: center; display: flex; align-items: center; justify-content: center; gap: 5px; }
+        .route-buttons { display: flex; flex-direction: column; gap: 10px; margin: 15px 0; background: #fdfdfd; padding: 10px; border: 1px dashed #ccc; border-radius: 10px; }
+        .btn-route { padding: 10px; border-radius: 8px; text-decoration: none; font-size: 0.9em; font-weight: bold; text-align: center; display: flex; align-items: center; justify-content: center; gap: 8px; transition: 0.2s; }
         .btn-morning { background: white; color: var(--route-blue); border: 2px solid var(--route-blue); }
         .btn-evening { background: var(--route-blue); color: white; }
+        .btn-route:hover { opacity: 0.85; }
         .btn-group { display: flex; gap: 10px; margin-top: 20px; flex-wrap: wrap; }
         .btn { flex: 1; min-width: 120px; padding: 12px; border-radius: 30px; text-align: center; text-decoration: none; font-weight: bold; font-size: 0.9em; display: flex; align-items: center; justify-content: center; gap: 8px; }
         .btn-maps { background: #34a853; color: white; }
@@ -33,12 +34,12 @@
 <body>
 
 <header>
-    <h1>יפן 2026: המסע של מזי ושייקו</h1>
+    <h1>יפן 2026: המסע של מזי ושיקו</h1>
     <p>ספטמבר 21 - אוקטובר 10 | הלו"ז המלא והמעודכן</p>
 </header>
 
 <div class="nav-tabs">
-    <a href="#tokyo" class="nav-link">טוקיו</a>
+    <a href="#tokyo" class="nav-link active">טוקיו</a>
     <a href="#fuji" class="nav-link">פוג'י</a>
     <a href="#kanazawa" class="nav-link">קאנאזאווה</a>
     <a href="#kyoto" class="nav-link">קיוטו</a>
@@ -57,13 +58,11 @@
             <div class="day-body">
                 <div class="logistics">נחיתה ב-06:55. רכבת Keikyu ל-Shimbashi.</div>
                 <div class="route-buttons">
-                    <a href="https://www.google.com/maps/dir/?api=1&origin=Haneda+Airport&destination=Villa+Fontaine+Grand+Tokyo+Shiodome" class="btn-route btn-morning" target="_blank">מהשדה למלון</a>
-                    <a href="https://www.google.com/maps/dir/?api=1&origin=My+Location&destination=Villa+Fontaine+Grand+Tokyo+Shiodome" class="btn-route btn-evening" target="_blank">חזרה למלון</a>
+                    <a href="https://www.google.com/maps/dir/?api=1&origin=Haneda+Airport&destination=Shimbashi+Station&travelmode=transit" class="btn-route btn-morning" target="_blank"><i class="fas fa-train"></i> מנמל התעופה האנדה לתחנת שימבאשי</a>
                 </div>
                 <p>גני המאריקו ובית התה. תצפית ערב מבניין Caretta.</p>
                 <div class="btn-group">
-                    <a href="https://www.google.com/maps/search/?api=1&query=Hamarikyu+Gardens" class="btn btn-maps" target="_blank">ניווט לגן</a>
-                    <a href="https://calendar.google.com/calendar/embed?src=shicko01%40gmail.com&ctz=Asia%2FJerusalem" class="btn btn-cal" target="_blank">יומן גוגל</a>
+                    <a href="https://www.google.com/maps/dir/?api=1&destination=Hamarikyu+Gardens&travelmode=walking" class="btn btn-maps" target="_blank">ניווט רגלי לגן</a>
                 </div>
             </div>
             <div class="hotel-footer">לינה: Villa Fontaine Shiodome</div>
@@ -73,11 +72,10 @@
             <div class="day-header"><span>22.9 | יום ג'</span><span>פסטיבל ויוקרה</span></div>
             <div class="day-body">
                 <div class="route-buttons">
-                    <a href="https://www.google.com/maps/dir/?api=1&origin=Villa+Fontaine+Grand+Tokyo+Shiodome&destination=Tsukiji+Outer+Market" class="btn-route btn-morning" target="_blank">מהמלון לשוק</a>
-                    <a href="https://www.google.com/maps/dir/?api=1&origin=My+Location&destination=Villa+Fontaine+Grand+Tokyo+Shiodome" class="btn-route btn-evening" target="_blank">חזרה למלון</a>
+                    <a href="https://www.google.com/maps/dir/?api=1&origin=Tsukiji+Outer+Market&destination=Ginza+Station&travelmode=transit" class="btn-route btn-morning" target="_blank"><i class="fas fa-subway"></i> משוק צוקיג'י לרובע גינזה</a>
+                    <a href="https://www.google.com/maps/dir/?api=1&origin=Ginza+Station&destination=Shibuya+Station&travelmode=transit" class="btn-route btn-evening" target="_blank"><i class="fas fa-subway"></i> מגינזה לשיבויה (לפסטיבל)</a>
                 </div>
                 <p>שוק צוקיג'י ופסטיבל קונו האצ'ימאנגו בשיבויה. ערב במסעדת Kozue.</p>
-                <div class="btn-group"><a href="https://www.google.com/maps/search/?api=1&query=Konno+Hachimangu+Shrine" class="btn btn-maps" target="_blank">ניווט לפסטיבל</a></div>
             </div>
             <div class="hotel-footer">לינה: Villa Fontaine Shiodome</div>
         </div>
@@ -86,11 +84,10 @@
             <div class="day-header"><span>23.9 | יום ד'</span><span>מסורת ועתיד</span></div>
             <div class="day-body">
                 <div class="route-buttons">
-                    <a href="https://www.google.com/maps/dir/?api=1&origin=Villa+Fontaine+Grand+Tokyo+Shiodome&destination=Senso-ji" class="btn-route btn-morning" target="_blank">מהמלון למקדש</a>
-                    <a href="https://www.google.com/maps/dir/?api=1&origin=My+Location&destination=Villa+Fontaine+Grand+Tokyo+Shiodome" class="btn-route btn-evening" target="_blank">חזרה למלון</a>
+                    <a href="https://www.google.com/maps/dir/?api=1&origin=Shimbashi+Station&destination=Senso-ji&travelmode=transit" class="btn-route btn-morning" target="_blank"><i class="fas fa-subway"></i> משימבאשי למקדש סנסו-ג'י</a>
+                    <a href="https://www.google.com/maps/dir/?api=1&origin=Senso-ji&destination=Odaiba+Marine+Park&travelmode=transit" class="btn-route btn-evening" target="_blank"><i class="fas fa-ship"></i> מאסאקוסה לאודייבה</a>
                 </div>
                 <p>מקדש סנסו-ג'י, שייט לאודייבה, פסל הגאנדם וגשר הריינבו.</p>
-                <div class="btn-group"><a href="https://www.google.com/maps/search/?api=1&query=Odaiba+Gundam+Statue" class="btn btn-maps" target="_blank">ניווט לגאנדם</a></div>
             </div>
             <div class="hotel-footer">לינה: Villa Fontaine Shiodome</div>
         </div>
@@ -104,8 +101,7 @@
             <div class="day-body">
                 <div class="logistics">לקיחת רכב בשינאגאווה. נסיעה לקאוואגוצ'יקו.</div>
                 <div class="route-buttons">
-                    <a href="https://www.google.com/maps/dir/?api=1&origin=Villa+Fontaine+Grand+Tokyo+Shiodome&destination=Oishi+Park" class="btn-route btn-morning" target="_blank">מהמלון לפארק אוישי</a>
-                    <a href="https://www.google.com/maps/dir/?api=1&origin=My+Location&destination=Arcade+Hotel+Fuji" class="btn-route btn-evening" target="_blank">חזרה למלון</a>
+                    <a href="https://www.google.com/maps/dir/?api=1&origin=Shinagawa+Station&destination=Oishi+Park&travelmode=driving" class="btn-route btn-morning" target="_blank"><i class="fas fa-car"></i> משינאגאווה לפארק אוישי</a>
                 </div>
                 <p>פארק אוישי וצמחי הקוקיה האדומים. ארוחת הוטו.</p>
             </div>
@@ -116,8 +112,9 @@
             <div class="day-header"><span>25.9 | יום ו'</span><span>צילום ואמנות</span></div>
             <div class="day-body">
                 <div class="route-buttons">
-                    <a href="https://www.google.com/maps/dir/?api=1&origin=Arcade+Hotel+Fuji&destination=Chureito+Pagoda" class="btn-route btn-morning" target="_blank">מהמלון לפגודה</a>
-                    <a href="https://www.google.com/maps/dir/?api=1&origin=My+Location&destination=Arcade+Hotel+Fuji" class="btn-route btn-evening" target="_blank">חזרה למלון</a>
+                    <a href="https://www.google.com/maps/dir/?api=1&origin=Arcade+Hotel+Fuji&destination=Chureito+Pagoda&travelmode=driving" class="btn-route btn-morning" target="_blank"><i class="fas fa-car"></i> מהמלון לפגודת צ'ורייטו</a>
+                    <a href="https://www.google.com/maps/dir/?api=1&origin=Chureito+Pagoda&destination=Itchiku+Kubota+Art+Museum&travelmode=driving" class="btn-route btn-evening" target="_blank"><i class="fas fa-car"></i> מפגודת צ'ורייטו למוזיאון קובוטה</a>
+                    <a href="https://www.google.com/maps/dir/?api=1&origin=Itchiku+Kubota+Art+Museum&destination=Oshino+Hakkai&travelmode=driving" class="btn-route btn-morning" target="_blank"><i class="fas fa-car"></i> ממוזיאון קובוטה לכפר אושינו האקאי</a>
                 </div>
                 <p>פגודת צ'ורייטו, מוזיאון איצ'יקו קובוטה ומעיינות אושונו האקאי.</p>
             </div>
@@ -133,8 +130,9 @@
             <div class="day-body">
                 <div class="logistics">החזרת רכב במישימה. שינקנסן לקאנאזאווה.</div>
                 <div class="route-buttons">
-                    <a href="https://www.google.com/maps/dir/?api=1&origin=Arcade+Hotel+Fuji&destination=Mishima+Station" class="btn-route btn-morning" target="_blank">מהמלון לתחנה</a>
-                    <a href="https://www.google.com/maps/dir/?api=1&origin=My+Location&destination=Hotel+Forza+Kanazawa" class="btn-route btn-evening" target="_blank">חזרה למלון</a>
+                    <a href="https://www.google.com/maps/dir/?api=1&origin=Kawaguchiko&destination=Mishima+Station&travelmode=driving" class="btn-route btn-morning" target="_blank"><i class="fas fa-car"></i> מקאוואגוצ'יקו לתחנת מישימה (החזרת רכב)</a>
+                    <a href="https://www.google.com/maps/dir/?api=1&origin=Mishima+Station&destination=Kanazawa+Station&travelmode=transit" class="btn-route btn-evening" target="_blank"><i class="fas fa-train"></i> מתחנת מישימה לקאנאזאווה (שינקנסן)</a>
+                    <a href="https://www.google.com/maps/dir/?api=1&origin=Kanazawa+Station&destination=Higashi+Chaya+District&travelmode=transit" class="btn-route btn-morning" target="_blank"><i class="fas fa-bus"></i> מקאנאזאווה לרובע היגאשי צ'איה</a>
                 </div>
                 <p>רובע הגיישות היגאשי צ'איה בשקיעה. גלידת זהב.</p>
             </div>
@@ -145,8 +143,8 @@
             <div class="day-header"><span>27.9 | יום א'</span><span>גנים וסמוראים</span></div>
             <div class="day-body">
                 <div class="route-buttons">
-                    <a href="https://www.google.com/maps/dir/?api=1&origin=Hotel+Forza+Kanazawa&destination=Kenrokuen" class="btn-route btn-morning" target="_blank">מהמלון לגן</a>
-                    <a href="https://www.google.com/maps/dir/?api=1&origin=My+Location&destination=Hotel+Forza+Kanazawa" class="btn-route btn-evening" target="_blank">חזרה למלון</a>
+                    <a href="https://www.google.com/maps/dir/?api=1&origin=Kanazawa+Station&destination=Kenrokuen&travelmode=transit" class="btn-route btn-morning" target="_blank"><i class="fas fa-bus"></i> מהתחנה לגן קנרוקואן</a>
+                    <a href="https://www.google.com/maps/dir/?api=1&origin=Kenrokuen&destination=Omicho+Market&travelmode=transit" class="btn-route btn-evening" target="_blank"><i class="fas fa-bus"></i> מגן קנרוקואן לשוק אומיצ'ו</a>
                 </div>
                 <p>גן קנרוקואן, רובע הסמוראים נאגאמאצ'י ושוק אומיצ'ו.</p>
             </div>
@@ -162,8 +160,7 @@
             <div class="day-body">
                 <div class="logistics">רכבת Thunderbird לקיוטו.</div>
                 <div class="route-buttons">
-                    <a href="https://www.google.com/maps/dir/?api=1&origin=Hotel+Forza+Kanazawa&destination=Kanazawa+Station" class="btn-route btn-morning" target="_blank">מהמלון לתחנה</a>
-                    <a href="https://www.google.com/maps/dir/?api=1&origin=My+Location&destination=Mitsui+Garden+Hotel+Kyoto+Station" class="btn-route btn-evening" target="_blank">חזרה למלון</a>
+                    <a href="https://www.google.com/maps/dir/?api=1&origin=Kanazawa+Station&destination=Kyoto+Station&travelmode=transit" class="btn-route btn-morning" target="_blank"><i class="fas fa-train"></i> מקאנאזאווה לקיוטו</a>
                 </div>
                 <p>פסטיבל Kushi Matsuri בגיון. סמטת פונטוצ'ו בלילה.</p>
             </div>
@@ -174,8 +171,8 @@
             <div class="day-header"><span>29.9 | יום ג'</span><span>במבוק וקוסמוס</span></div>
             <div class="day-body">
                 <div class="route-buttons">
-                    <a href="https://www.google.com/maps/dir/?api=1&origin=Mitsui+Garden+Hotel+Kyoto+Station&destination=Arashiyama+Bamboo+Forest" class="btn-route btn-morning" target="_blank">מהמלון ליער</a>
-                    <a href="https://www.google.com/maps/dir/?api=1&origin=My+Location&destination=Mitsui+Garden+Hotel+Kyoto+Station" class="btn-route btn-evening" target="_blank">חזרה למלון</a>
+                    <a href="https://www.google.com/maps/dir/?api=1&origin=Kyoto+Station&destination=Arashiyama+Bamboo+Grove&travelmode=transit" class="btn-route btn-morning" target="_blank"><i class="fas fa-train"></i> מתחנת קיוטו ליער הבמבוק</a>
+                    <a href="https://www.google.com/maps/dir/?api=1&origin=Arashiyama&destination=Hannyaji+Temple&travelmode=transit" class="btn-route btn-evening" target="_blank"><i class="fas fa-train"></i> מאראשיאמה למקדש האניאג'י</a>
                 </div>
                 <p>יער הבמבוק אראשייאמה ומקדש האניאג'י (פריחת קוסמוס).</p>
             </div>
@@ -186,8 +183,7 @@
             <div class="day-header"><span>30.9 | יום ד'</span><span>נארה והאיילים</span></div>
             <div class="day-body">
                 <div class="route-buttons">
-                    <a href="https://www.google.com/maps/dir/?api=1&origin=Mitsui+Garden+Hotel+Kyoto+Station&destination=Todai-ji" class="btn-route btn-morning" target="_blank">מהמלון לנארה</a>
-                    <a href="https://www.google.com/maps/dir/?api=1&origin=My+Location&destination=Mitsui+Garden+Hotel+Kyoto+Station" class="btn-route btn-evening" target="_blank">חזרה למלון</a>
+                    <a href="https://www.google.com/maps/dir/?api=1&origin=Kyoto+Station&destination=Nara+Park&travelmode=transit" class="btn-route btn-morning" target="_blank"><i class="fas fa-train"></i> מתחנת קיוטו לפארק נארה</a>
                 </div>
                 <p>מקדש טודאי-ג'י, האיילים בנארה וגן איסואיין.</p>
             </div>
@@ -198,8 +194,8 @@
             <div class="day-header"><span>1.10 | יום ה'</span><span>זהב ובוטניקה</span></div>
             <div class="day-body">
                 <div class="route-buttons">
-                    <a href="https://www.google.com/maps/dir/?api=1&origin=Mitsui+Garden+Hotel+Kyoto+Station&destination=Kinkaku-ji" class="btn-route btn-morning" target="_blank">מהמלון לזהב</a>
-                    <a href="https://www.google.com/maps/dir/?api=1&origin=My+Location&destination=Mitsui+Garden+Hotel+Kyoto+Station" class="btn-route btn-evening" target="_blank">חזרה למלון</a>
+                    <a href="https://www.google.com/maps/dir/?api=1&origin=Kyoto+Station&destination=Kinkaku-ji&travelmode=transit" class="btn-route btn-morning" target="_blank"><i class="fas fa-bus"></i> מתחנת קיוטו למקדש הזהב</a>
+                    <a href="https://www.google.com/maps/dir/?api=1&origin=Ryoan-ji&destination=Kyoto+Botanical+Gardens&travelmode=transit" class="btn-route btn-evening" target="_blank"><i class="fas fa-bus"></i> מריואן-ג'י לגן הבוטני (אורכידאות)</a>
                 </div>
                 <p>מקדש הזהב והגנים הבוטניים של קיוטו (אורכידאות).</p>
             </div>
@@ -210,8 +206,8 @@
             <div class="day-header"><span>2.10 | יום ו'</span><span>שערים ותצפית</span></div>
             <div class="day-body">
                 <div class="route-buttons">
-                    <a href="https://www.google.com/maps/dir/?api=1&origin=Mitsui+Garden+Hotel+Kyoto+Station&destination=Fushimi+Inari+Taisha" class="btn-route btn-morning" target="_blank">מהמלון לשערים</a>
-                    <a href="https://www.google.com/maps/dir/?api=1&origin=My+Location&destination=Mitsui+Garden+Hotel+Kyoto+Station" class="btn-route btn-evening" target="_blank">חזרה למלון</a>
+                    <a href="https://www.google.com/maps/dir/?api=1&origin=Kyoto+Station&destination=Fushimi+Inari+Taisha&travelmode=transit" class="btn-route btn-morning" target="_blank"><i class="fas fa-train"></i> מתחנת קיוטו לפושימי אינארי</a>
+                    <a href="https://www.google.com/maps/dir/?api=1&origin=Fushimi+Inari+Taisha&destination=Kiyomizu-dera&travelmode=transit" class="btn-route btn-evening" target="_blank"><i class="fas fa-train"></i> מפושימי אינארי לקיומיזו-דרה</a>
                 </div>
                 <p>פושימי אינארי ותצפית מקיומיזו-דרה.</p>
             </div>
@@ -227,10 +223,11 @@
             <div class="day-body">
                 <div class="logistics">שינקנסן להירושימה.</div>
                 <div class="route-buttons">
-                    <a href="https://www.google.com/maps/dir/?api=1&origin=Mitsui+Garden+Hotel+Kyoto+Station&destination=Hiroshima+Peace+Memorial+Park" class="btn-route btn-morning" target="_blank">מהמלון לפארק</a>
-                    <a href="https://www.google.com/maps/dir/?api=1&origin=My+Location&destination=Hotel+Granvia+Hiroshima" class="btn-route btn-evening" target="_blank">חזרה למלון</a>
+                    <a href="https://www.google.com/maps/dir/?api=1&origin=Kyoto+Station&destination=Hiroshima+Station&travelmode=transit" class="btn-route btn-morning" target="_blank"><i class="fas fa-train"></i> מקיוטו להירושימה (שינקנסן)</a>
+                    <a href="https://www.google.com/maps/dir/?api=1&origin=Hiroshima+Station&destination=Peace+Memorial+Park&travelmode=transit" class="btn-route btn-evening" target="_blank"><i class="fas fa-tram"></i> מהתחנה לפארק השלום</a>
+                    <a href="https://www.google.com/maps/dir/?api=1&origin=Hiroshima+Station&destination=Saijo+Station&travelmode=transit" class="btn-route btn-morning" target="_blank"><i class="fas fa-train"></i> אל פסטיבל הסאקה בסאיג'ו</a>
                 </div>
-                <p>פארק השלום, אוקונומיאקי ופסטיבל סאקה/במבוק.</p>
+                <p>פארק השלום, אוקונומיאקי ופסטיבל סאקה.</p>
             </div>
             <div class="hotel-footer">לינה: Hotel Granvia Hiroshima</div>
         </div>
@@ -239,8 +236,7 @@
             <div class="day-header"><span>4.10 | יום א'</span><span>האי הקדוש</span></div>
             <div class="day-body">
                 <div class="route-buttons">
-                    <a href="https://www.google.com/maps/dir/?api=1&origin=Hotel+Granvia+Hiroshima&destination=Miyajimaguchi+Station" class="btn-route btn-morning" target="_blank">מהמלון למעבורת</a>
-                    <a href="https://www.google.com/maps/dir/?api=1&origin=My+Location&destination=Hotel+Granvia+Hiroshima" class="btn-route btn-evening" target="_blank">חזרה למלון</a>
+                    <a href="https://www.google.com/maps/dir/?api=1&origin=Hiroshima+Station&destination=Miyajima&travelmode=transit" class="btn-route btn-morning" target="_blank"><i class="fas fa-ship"></i> מהירושימה למעבורת מיאג'ימה</a>
                 </div>
                 <p>מיאג'ימה, שער הטוריי הצף והר מיסן.</p>
             </div>
@@ -255,8 +251,8 @@
             <div class="day-header"><span>5.10 | יום ב'</span><span>ניאון וריקודים</span></div>
             <div class="day-body">
                 <div class="route-buttons">
-                    <a href="https://www.google.com/maps/dir/?api=1&origin=Hotel+Granvia+Hiroshima&destination=Dotonbori" class="btn-route btn-morning" target="_blank">מהמלון לדוטונבורי</a>
-                    <a href="https://www.google.com/maps/dir/?api=1&origin=My+Location&destination=Hotel+Monterey+Grasmere+Osaka" class="btn-route btn-evening" target="_blank">חזרה למלון</a>
+                    <a href="https://www.google.com/maps/dir/?api=1&origin=Hiroshima+Station&destination=Namba+Station&travelmode=transit" class="btn-route btn-morning" target="_blank"><i class="fas fa-train"></i> מהירושימה לנמבה אוסקה</a>
+                    <a href="https://www.google.com/maps/dir/?api=1&origin=Namba+Station&destination=Tennoji+Station&travelmode=transit" class="btn-route btn-evening" target="_blank"><i class="fas fa-subway"></i> מנמבה למתנ"ס טנוג'י (ריקודי עם)</a>
                 </div>
                 <p>דוטונבורי ומפגש ריקודי עם עם סונהרה-סאן.</p>
             </div>
@@ -267,8 +263,7 @@
             <div class="day-header"><span>6.10 | יום ג'</span><span>שווקים וטירה</span></div>
             <div class="day-body">
                 <div class="route-buttons">
-                    <a href="https://www.google.com/maps/dir/?api=1&origin=Hotel+Monterey+Grasmere+Osaka&destination=Osaka+Castle" class="btn-route btn-morning" target="_blank">מהמלון לטירה</a>
-                    <a href="https://www.google.com/maps/dir/?api=1&origin=My+Location&destination=Hotel+Monterey+Grasmere+Osaka" class="btn-route btn-evening" target="_blank">חזרה למלון</a>
+                    <a href="https://www.google.com/maps/dir/?api=1&origin=Namba+Station&destination=Osaka+Castle&travelmode=transit" class="btn-route btn-morning" target="_blank"><i class="fas fa-train"></i> מנמבה לטירת אוסקה</a>
                 </div>
                 <p>שוק קורומון וטירת אוסקה.</p>
             </div>
@@ -284,8 +279,7 @@
             <div class="day-body">
                 <div class="logistics">רכבת Hida Wide View.</div>
                 <div class="route-buttons">
-                    <a href="https://www.google.com/maps/dir/?api=1&origin=Hotel+Monterey+Grasmere+Osaka&destination=Takayama+Station" class="btn-route btn-morning" target="_blank">מהמלון לטאקאיאמה</a>
-                    <a href="https://www.google.com/maps/dir/?api=1&origin=My+Location&destination=Spa+Hotel+Alpina+Hida+Takayama" class="btn-route btn-evening" target="_blank">חזרה למלון</a>
+                    <a href="https://www.google.com/maps/dir/?api=1&origin=Osaka+Station&destination=Takayama+Station&travelmode=transit" class="btn-route btn-morning" target="_blank"><i class="fas fa-train"></i> מאוסקה לטאקאיאמה</a>
                 </div>
                 <p>נסיעה נופית וסיור ברובע העתיק סנמאצ'י סוג'י.</p>
             </div>
@@ -296,8 +290,7 @@
             <div class="day-header"><span>8.10 | יום ה'</span><span>מסורת כפרית</span></div>
             <div class="day-body">
                 <div class="route-buttons">
-                    <a href="https://www.google.com/maps/dir/?api=1&origin=Spa+Hotel+Alpina+Hida+Takayama&destination=Miyagawa+Morning+Market" class="btn-route btn-morning" target="_blank">מהמלון לשוק</a>
-                    <a href="https://www.google.com/maps/dir/?api=1&origin=My+Location&destination=Spa+Hotel+Alpina+Hida+Takayama" class="btn-route btn-evening" target="_blank">חזרה למלון</a>
+                    <a href="https://www.google.com/maps/dir/?api=1&origin=Takayama+Station&destination=Hida+Folk+Village&travelmode=transit" class="btn-route btn-morning" target="_blank"><i class="fas fa-bus"></i> מטאקאיאמה לכפר הפולקלור הידא</a>
                 </div>
                 <p>שוק Miyagawa וכפר הפולקלור הידא.</p>
             </div>
@@ -309,8 +302,7 @@
             <div class="day-body">
                 <div class="logistics">פסטיבל טאקאיאמה. רכבת לנגויה ב-18:30.</div>
                 <div class="route-buttons">
-                    <a href="https://www.google.com/maps/dir/?api=1&origin=Spa+Hotel+Alpina+Hida+Takayama&destination=Takayama+Station" class="btn-route btn-morning" target="_blank">מהמלון לתחנה</a>
-                    <a href="https://www.google.com/maps/dir/?api=1&origin=My+Location&destination=Nagoya+JR+Gate+Tower+Hotel" class="btn-route btn-evening" target="_blank">חזרה למלון (נגויה)</a>
+                    <a href="https://www.google.com/maps/dir/?api=1&origin=Takayama+Station&destination=Nagoya+Station&travelmode=transit" class="btn-route btn-morning" target="_blank"><i class="fas fa-train"></i> מטאקאיאמה לנגויה</a>
                 </div>
                 <p>עגלות יאטאי ובובות קאראקורי. מעבר לנגויה.</p>
             </div>
@@ -322,16 +314,15 @@
             <div class="day-body">
                 <div class="logistics">שינקנסן ורכבת נריטה אקספרס.</div>
                 <div class="route-buttons">
-                    <a href="https://www.google.com/maps/dir/?api=1&origin=Nagoya+JR+Gate+Tower+Hotel&destination=Narita+Airport" class="btn-route btn-morning" target="_blank">מהמלון לשדה</a>
+                    <a href="https://www.google.com/maps/dir/?api=1&origin=Nagoya+Station&destination=Narita+Airport&travelmode=transit" class="btn-route btn-morning" target="_blank"><i class="fas fa-train"></i> מנגויה לנמל התעופה נריטה</a>
                 </div>
                 <p>אריזות מתנה אחרונות וטיסה הביתה.</p>
             </div>
         </div>
     </div>
-
 </div>
 
-<footer><p>נבנה באהבה עבור מזי ושייקו | יפן 2026 🌸</p></footer>
+<footer><p>נבנה באהבה עבור מזי ושיקו | יפן 2026 🌸</p></footer>
 
 <script>
     window.addEventListener('scroll', () => {
@@ -340,6 +331,5 @@
         document.querySelectorAll('.nav-link').forEach(link => { link.classList.remove('active'); if (link.getAttribute('href').includes(current)) link.classList.add('active'); });
     });
 </script>
-
 </body>
 </html>
